@@ -32,7 +32,7 @@ $container['db'] = function ($container) {
 $app->get('/hello/{name}', function (Request $request, Response $response, array $args) {
     $name = $args['name'];	
 	$sec = new input_validation();
-    $response->getBody()/*->write($name);*/->write($sec->check_subs_name($name));
+    $response->getBody()/*->write($name);*/->write($sec->check_address($name));
     return $response;
 });
 
